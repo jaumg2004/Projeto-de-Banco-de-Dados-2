@@ -1,7 +1,7 @@
-from Database import SocialScoreDatabase
+from Database import Database
 
 def main():
-    db = SocialScoreDatabase("neo4j://localhost:7687", "neo4j", "password")
+    db = Database("neo4j://localhost:7687", "neo4j", "password")
 
     while True:
         print("\n=== Rede Social ===")
