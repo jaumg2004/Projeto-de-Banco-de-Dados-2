@@ -1,7 +1,7 @@
 from Database import Database
 
 def main():
-    db = Database("neo4j://localhost:7687", "neo4j", "password")
+    db = Database("bolt://3.86.108.35", "neo4j", "threat-outfits-dresses")
 
     while True:
         print("\n=== Rede Social ===")
