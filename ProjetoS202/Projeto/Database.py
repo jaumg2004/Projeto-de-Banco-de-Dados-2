@@ -45,3 +45,13 @@ class SocialScoreDatabase:
         query = "MATCH (u:Usuario {login: $login}) RETURN COUNT(u) > 0 AS exists"
         result = tx.run(query, login=login)
         return result.single()["exists"]
+
+    def verificar_login(self, login, senha):
+        with self.driver.session() as session:
+            return session.read_transaction(self._verificar_login, login, senha)
+
+    @staticmethod
+    def _verificar_login(tx, login, senha):
+        query = "MATCH (u:Usuario {login: $login, senha: $senha}) RETURN COUNT(u) > 0 AS exists"
+        result = tx.run(query, login=login, senha=senha)
+        return result.single()["exists"]
