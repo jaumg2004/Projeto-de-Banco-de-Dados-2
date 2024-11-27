@@ -5,7 +5,7 @@ def main():
 
     while True:
         print("\n=== Rede Social ===")
-        print("1.Criar Conta")
+        print("1. Criar Conta")
         print("2. Fazer Login")
         print("3. Sair")
         choice = input("Escolha uma opção: ")
