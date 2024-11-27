@@ -42,6 +42,13 @@ def main():
                     contexto = input("Digite o contexto da avaliação: ")
                     db.avaliar_usuario(login, avaliado, nota, contexto)
                     print(f"{login} avaliou {avaliado} com a nota {nota} no contexto: '{contexto}'.")
+                    
+                elif choice_avaliar == '2':
+                    print("Saindo da conta...")
+                    break
+
+                else:
+                    print("Opção inválida. Tente novamente.")
 
         if choice == '2':
             login = input("Digite o login do usuário: ")
